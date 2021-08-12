@@ -24,10 +24,12 @@ ul {
 li {
   list-style: none;
 }
+
 .weather-app-wrapper {
   max-width: 1050px;
   margin: 30px auto;
 }
+
 .weather-app {
   max-width: 1050px;
   margin: 30px auto;
@@ -68,6 +70,9 @@ li {
   position: relative;
   right: 50px;
   top: -10px;
+}
+
+.picDescription::first-letter {
   text-transform: capitalize;
 }
 

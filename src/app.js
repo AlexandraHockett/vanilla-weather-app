@@ -1,6 +1,35 @@
-function displayTemperature(response) {
-  console.log(response.data);
+function formatDate(timestamp) {
+  let date = new Date(timestamp);
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+  let weekDay = days[date.getDay()];
+  let months = [
+    "Jan",
+    "Feb",
+    "Mar",
+    "Apr",
+    "May",
+    "Jun",
+    "Jul",
+    "Aug",
+    "Sep",
+    "Oct",
+    "Nov",
+    "Dec",
+  ];
+  let month = months[date.getMonth()];
+  let day = date.getDate();
+  let hours = date.getHours();
+  if (hours < 10) {
+    minutes = "0" + hours;
+  }
+  let minutes = date.getMinutes();
+  if (minutes < 10) {
+    minutes = "0" + minutes;
+  }
+  return `${weekDay}/${month} ${day}, ${hours}:${minutes}`;
+}
 
+function displayTemperature(response) {
   let temperatureElement = document.querySelector("h2");
   let cityElement = document.querySelector("h1");
   let feelsLikeElement = Math.round(response.data.main.feels_like);
@@ -9,6 +38,8 @@ function displayTemperature(response) {
   let currentMaxElement = document.querySelector("#currentMax");
   let currentMinElement = document.querySelector("#currentMin");
   let humidityElement = document.querySelector("#humidity");
+  let dateElement = document.querySelector("#date");
+  
   temperatureElement.innerHTML = Math.round(response.data.main.temp);
   cityElement.innerHTML = response.data.name;
   feelsElement.innerHTML = `${feelsLikeElement}º`;
@@ -16,6 +47,7 @@ function displayTemperature(response) {
   currentMaxElement.innerHTML = Math.round(response.data.main.temp_max);
   currentMinElement.innerHTML = Math.round(response.data.main.temp_min);
   humidityElement.innerHTML = response.data.main.humidity;
+  dateElement.innerHTML = formatDate(response.data.dt * 1000);
 }
 
 let apiKey = "06fbd7d55cead2045835eef5076a763f";
