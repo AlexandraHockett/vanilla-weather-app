@@ -10,6 +10,7 @@
       integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We"
       crossorigin="anonymous"
     />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <link rel="stylesheet" href="src/style.css" />
     <title>Weather App</title>
   </head>
@@ -18,30 +19,30 @@
       <div class="weather-app-wrapper">
         <div class="weather-app">
           <div class="overview">
-            <h1>Lisbon, Weather</h1>
+            <h1>Lisbon</h1>
             <ul>
               <li>Updated on Wed/Aug 11, 05:00</li>
             </ul>
           </div>
           <div class="row">
             <div class="col-md-6">
-              <h2>27</h2>
+              <h2></h2>
               ºC | ºF
               <span class="feels">feels like</span>
-              <div class="feelsDegree" id="feelsLike">27º</div>
+              <div class="feelsDegree" id="feelsLike"></div>
               <div class="picweather">
                 <img
                   src="https://assets.msn.com/bundles/v1/weather/latest/SunnyDayV3.svg"
                   alt="sunny"
                 />
               </div>
-              <span class="animdescription" id="picsDescription"> Sunny </span>
+              <span class="picDescription" id="description"></span>
             </div>
             <div class="col-md-6">
               <ul class="details">
-                <li>Máx: 0%</li>
-                <li>Min: 73%</li>
-                <li>Humidity:42%</li>
+                <li><strong>Máx: </strong><span id="currentMax"></span>º</li>
+                <li><strong>Min: </strong><span id="currentMin"></span>º</li>
+                <li><strong>Humidity: </strong><span id="humidity"></span>%</li>
               </ul>
             </div>
           </div>

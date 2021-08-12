@@ -62,12 +62,13 @@ li {
   right: -30px;
 }
 
-.animdescription {
+.picDescription {
   margin-right: 5mm;
   display: inline-block;
   position: relative;
   right: 50px;
   top: -10px;
+  text-transform: capitalize;
 }
 
 .details {
