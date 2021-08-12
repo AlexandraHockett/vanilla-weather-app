@@ -26,12 +26,12 @@ li {
 }
 
 .weather-app-wrapper {
-  max-width: 1050px;
+  max-width: 1120px;
   margin: 30px auto;
 }
 
 .weather-app {
-  max-width: 1050px;
+  max-width: 1120px;
   margin: 30px auto;
   padding: 20px;
   border: 1px solid #dadde1;

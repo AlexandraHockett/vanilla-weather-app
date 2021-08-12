@@ -18,8 +18,20 @@
     <div class="container">
       <div class="weather-app-wrapper">
         <div class="weather-app">
+          <div class="citySearch">
+            <form>
+              <input
+                type="search"
+                placeholder="Type a city..."
+                id="enterCity"
+                autocomplete="off"
+              />
+              <input type="submit" value="Search" class="search" />
+            </form>
+          </div>
+          <br />
           <div class="overview">
-            <h1>Lisbon</h1>
+            <h1></h1>
             <ul>
               <li>Updated on <span id="date"></span></li>
             </ul>
