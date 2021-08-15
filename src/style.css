@@ -2,6 +2,10 @@ body {
   font-family: "Source Sans Pro", sans-serif;
 }
 
+a {
+  text-decoration: none;
+}
+
 h1 {
   margin: 20;
   font-style: bold;
@@ -26,16 +30,21 @@ li {
 }
 
 .weather-app-wrapper {
-  max-width: 1120px;
+  max-width: 1500px;
   margin: 30px auto;
 }
 
 .weather-app {
-  max-width: 1120px;
+  max-width: 1500px;
   margin: 30px auto;
   padding: 20px;
   border: 1px solid #dadde1;
   border-radius: 5px;
+}
+
+.active {
+  color: black;
+  cursor: default;
 }
 
 .overview {
