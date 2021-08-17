@@ -2,6 +2,18 @@ body {
   font-family: "Source Sans Pro", sans-serif;
 }
 
+video {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -1000;
+  background-size: cover;
+}
+
 a {
   text-decoration: none;
 }
@@ -29,6 +41,27 @@ li {
   list-style: none;
 }
 
+button {
+  font-size: small;
+  background: violet;
+  color: white;
+  border: none;
+}
+
+.citySearch {
+  font-size: 20px;
+  text-align: center;
+}
+
+.search {
+  background: grey;
+  color: white;
+  font-size: 12px;
+  padding: 7px 9px;
+  border: none;
+  border-radius: 10px;
+}
+
 .weather-app-wrapper {
   max-width: 1500px;
   margin: 30px auto;
@@ -36,10 +69,13 @@ li {
 
 .weather-app {
   max-width: 1500px;
-  margin: 30px auto;
+  margin-top: 100px;
   padding: 20px;
   border: 1px solid #dadde1;
-  border-radius: 5px;
+  display: block;
+  background: rgb(163, 166, 182);
+  opacity: 0.9;
+  border-radius: 30px;
 }
 
 .active {

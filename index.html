@@ -15,6 +15,9 @@
     <title>Weather App</title>
   </head>
   <body>
+    <video autoplay muted loop>
+      <source src="media/video/Snow on a tree branch.mp4" type="video/mp4" />
+    </video>
     <div class="container">
       <div class="weather-app-wrapper">
         <div class="weather-app">
@@ -27,6 +30,7 @@
                 autocomplete="off"
               />
               <input type="submit" value="Search" class="search" />
+              <button>Current Location</button>
             </form>
           </div>
           <br />
@@ -62,27 +66,23 @@
           <div class="weather-forecast-two" id="forecast">
             <div class="row">
               <div class="col-2">
-                <div class="weather-forecast-date">Thu</div>
-                <img
-                  src="http://openweathermap.org/img/wn/01d@2x.png"
-                  alt=""
-                  width="42"
-                />
+                <div class="weather-forecast-date"></div>
+                <img src="http://openweathermap.org/img/wn/01d@2x.png" alt="" />
                 <div class="weather-forecast-temperature">
-                  <span class="weather-forecast-max">18º</span>
-                  <span class="weather-forecast-min">12º</span>
+                  <span class="weather-forecast-max" id="forecast-max"></span>
+                  <span class="weather-forecast-min" id="forecast-min"></span>
                 </div>
               </div>
             </div>
           </div>
-
-          </div>
         </div>
+        <br />
         <small>
           <a href="https://github.com/AlexandraHockett/vanilla-weather-app"
             >Open-source code</a
           >
           by Alexandra Hockett
+          <img src="media/pics/minnieCoder.gif" width="30" />
         </small>
       </div>
     </div>

@@ -39,7 +39,6 @@ function formatDay(timestamp) {
 
 function displayForecast(response) {
   let forecast = response.data.daily;
-  console.log(response.data.daily);
   let forecastElement = document.querySelector("#forecast");
 
   let forecastHTML = `<div class="row">`;
@@ -139,6 +138,23 @@ function displayFahrenheitTemperature(event) {
   let fahrenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
   temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
 }
+
+function showLocation(event) {
+  event.preventDefault();
+
+  function currentLocation(position) {
+    let lat = position.coords.latitude;
+    let lon = position.coords.longitude;
+    let apiKey = "06fbd7d55cead2045835eef5076a763f";
+    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric`;
+
+    axios.get(apiUrl).then(displayTemperature);
+  }
+  navigator.geolocation.getCurrentPosition(currentLocation);
+}
+
+let button = document.querySelector("button");
+button.addEventListener("click", showLocation);
 
 let celsiusTemperature = null;
 
